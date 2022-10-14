@@ -12,21 +12,6 @@ interface ExpenditureRepository {
 
     fun getCurrency(): Flow<String>
 
-    //Category
-    fun insertCategory(categoryEntity: CategoryEntity)
-
-    fun updateCategory(categoryEntity: CategoryEntity)
-
-    fun deleteCategory(categoryEntity: CategoryEntity)
-
-    fun getCategories(): Flow<List<CategoryEntity>>
-
-    fun getExCategories(): Flow<List<CategoryEntity>>
-
-    fun getIncCategories(): Flow<List<CategoryEntity>>
-
-    fun clearCategoryData()
-
 
     //Expenditure
     fun insertExpenditure(expenditureEntity: ExpenditureEntity)

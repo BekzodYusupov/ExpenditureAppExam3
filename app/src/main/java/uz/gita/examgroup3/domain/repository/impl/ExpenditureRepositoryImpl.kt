@@ -14,7 +14,6 @@ import javax.inject.Inject
 
 class ExpenditureRepositoryImpl @Inject constructor(
     private val expenditureDao: ExpenditureDao,
-    private val categoryDao: CategoryDao,
     private val mShP: ShP
 ) : ExpenditureRepository {
 
@@ -32,21 +31,6 @@ class ExpenditureRepositoryImpl @Inject constructor(
     override fun getCurrency(): Flow<String> = flow {
         emit(mShP.currency)
     }.flowOn(Dispatchers.IO)
-
-    //Category
-    override fun insertCategory(categoryEntity: CategoryEntity) = categoryDao.insert(categoryEntity)
-
-    override fun updateCategory(categoryEntity: CategoryEntity) = categoryDao.update(categoryEntity)
-
-    override fun deleteCategory(categoryEntity: CategoryEntity) = categoryDao.delete(categoryEntity)
-
-    override fun getCategories(): Flow<List<CategoryEntity>> = categoryDao.getCategories()
-
-    override fun getExCategories(): Flow<List<CategoryEntity>> = categoryDao.getExCategories()
-
-    override fun getIncCategories(): Flow<List<CategoryEntity>> = categoryDao.getIncCategories()
-
-    override fun clearCategoryData() = categoryDao.clearData()
 
 
     //Expenditure
