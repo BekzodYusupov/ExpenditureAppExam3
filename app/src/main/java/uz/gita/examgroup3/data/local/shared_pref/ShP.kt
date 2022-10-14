@@ -1,9 +1,8 @@
-package uz.gita.examgroup3.data.local.SharedPref
+package uz.gita.examgroup3.data.local.shared_pref
 
 import android.content.Context
 import android.content.SharedPreferences
 import dagger.hilt.android.qualifiers.ApplicationContext
-import java.util.Currency
 import javax.inject.Inject
 import javax.inject.Singleton
 

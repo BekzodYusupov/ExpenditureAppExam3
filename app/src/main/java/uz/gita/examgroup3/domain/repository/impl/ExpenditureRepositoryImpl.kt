@@ -4,7 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import uz.gita.examgroup3.data.local.SharedPref.ShP
+import uz.gita.examgroup3.data.local.shared_pref.ShP
 import uz.gita.examgroup3.data.local.room.dao.ExpenditureDao
 import uz.gita.examgroup3.domain.repository.ExpenditureRepository
 import javax.inject.Inject
