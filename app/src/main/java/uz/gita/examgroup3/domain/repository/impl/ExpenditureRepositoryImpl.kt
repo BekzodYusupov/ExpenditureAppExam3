@@ -12,13 +12,21 @@ import javax.inject.Inject
 class ExpenditureRepositoryImpl @Inject constructor(
     private val expenditureDao: ExpenditureDao,
     private val mShP: ShP
-): ExpenditureRepository {
+) : ExpenditureRepository {
 
-    override suspend fun isIntroOpen(state:Boolean): Flow<Boolean> = flow {
+    override suspend fun isIntroOpen(state: Boolean): Flow<Boolean> = flow {
         if (!mShP.isInit) {
             emit(mShP.isInit)
             mShP.isInit = state
         }
+    }.flowOn(Dispatchers.IO)
+
+    override fun updateCurrency(currency: String) {
+        mShP.currency = currency
+    }
+
+    override fun getCurrency(): Flow<String> = flow<String> {
+        emit(mShP.currency)
     }.flowOn(Dispatchers.IO)
 
 }
