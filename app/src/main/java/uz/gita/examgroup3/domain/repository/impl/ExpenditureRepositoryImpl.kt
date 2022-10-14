@@ -24,14 +24,6 @@ class ExpenditureRepositoryImpl @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
-    override fun updateCurrency(currency: String) {
-        mShP.currency = currency
-    }
-
-    override fun getCurrency(): Flow<String> = flow {
-        emit(mShP.currency)
-    }.flowOn(Dispatchers.IO)
-
 
     //Expenditure
     override fun insertExpenditure(expenditureEntity: ExpenditureEntity) = expenditureDao.insert(expenditureEntity)

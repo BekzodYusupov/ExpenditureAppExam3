@@ -8,11 +8,6 @@ import uz.gita.examgroup3.data.local.room.entity.ExpenditureEntity
 interface ExpenditureRepository {
     suspend fun isIntroOpen(state: Boolean): Flow<Boolean>
 
-    fun updateCurrency(currency: String)
-
-    fun getCurrency(): Flow<String>
-
-
     //Expenditure
     fun insertExpenditure(expenditureEntity: ExpenditureEntity)
 
