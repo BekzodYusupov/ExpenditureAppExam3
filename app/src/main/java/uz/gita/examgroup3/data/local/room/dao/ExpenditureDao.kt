@@ -6,4 +6,6 @@ import uz.gita.examgroup3.data.local.room.entity.ExpenditureEntity
 @Dao
 interface ExpenditureDao:BaseDao<ExpenditureEntity> {
 
+
+
 }
