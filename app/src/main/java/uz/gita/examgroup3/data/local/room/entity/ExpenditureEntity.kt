@@ -9,8 +9,7 @@ data class ExpenditureEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long,
     val amount: Double,
-    val currency: String,
-//    val images: List<Uri>,
+    val notes: String,
     val type: Int, //0 = expense and 1 = income
     val categoryId: Long,
     val date: Long
