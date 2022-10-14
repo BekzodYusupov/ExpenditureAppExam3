@@ -3,6 +3,7 @@ package uz.gita.examgroup3.data.local.SharedPref
 import android.content.Context
 import android.content.SharedPreferences
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.util.Currency
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -17,4 +18,10 @@ class ShP @Inject constructor(@ApplicationContext private val context: Context) 
         set(state) {
             shP.edit().putBoolean("EXPENDITURE", state).apply()
         }
+    var currency: String
+        get() = shP.getString("currency", "\$")!!
+        set(str) {
+            shP.edit().putString("EXPENDITURE", str).apply()
+        }
+
 }
