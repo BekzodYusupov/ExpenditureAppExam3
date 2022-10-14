@@ -1,4 +1,4 @@
-package uz.gita.examgroup3.data.module
+package uz.gita.examgroup3.data.model
 
 enum class ExpenditureTypeEnum {
     EXPENSE, INCOME

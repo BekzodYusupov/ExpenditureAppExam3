@@ -1,8 +1,7 @@
-package uz.gita.examgroup3.domain.repository
+package uz.gita.examgroup3.domain.usecase
 
 import kotlinx.coroutines.flow.Flow
 
-interface ExpenditureRepository {
+interface SplashUseCase {
     suspend fun isIntroOpen(state: Boolean): Flow<Boolean>
-
 }

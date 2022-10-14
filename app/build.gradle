@@ -79,4 +79,7 @@ dependencies {
     implementation "cafe.adriel.voyager:voyager-androidx:1.0.0-rc02"
     implementation "cafe.adriel.voyager:voyager-hilt:1.0.0-rc02"
 
+    //lotte
+    implementation 'com.airbnb.android:lottie-compose:5.2.0'
+
 }
