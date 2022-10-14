@@ -16,16 +16,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class LocalDatabaseModule {
 
-    @Provides
-    @Singleton
+    @[Provides Singleton]
     fun provideDatabase(@ApplicationContext context: Context): AppDatabase =
         Room.databaseBuilder(context, AppDatabase::class.java, "expenditureApp.db").build()
 
-    @Provides
-    @Singleton
+    @[Provides Singleton]
     fun provideExpenditure(appDatabase: AppDatabase): ExpenditureDao = appDatabase.expenditureDao()
 
-    @Provides
-    @Singleton
+    @[Provides Singleton]
     fun provideCategory(appDatabase: AppDatabase): CategoryDao = appDatabase.categoryDao()
 }
