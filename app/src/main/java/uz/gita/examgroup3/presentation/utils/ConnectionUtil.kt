@@ -3,10 +3,9 @@ package uz.gita.examgroup3.presentation.utils
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.os.Build
 import uz.gita.examgroup3.app.App
 
-//fun hasConnection(): Boolean = App.getInstanceApp().isAvailableNetwork()
+fun hasConnection(): Boolean = App.getInstanceApp().isAvailableNetwork()
 private fun Context.isAvailableNetwork(): Boolean {
     var result = false
     val connectivityManager =
