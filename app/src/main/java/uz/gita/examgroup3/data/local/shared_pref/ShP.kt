@@ -17,10 +17,15 @@ class ShP @Inject constructor(@ApplicationContext private val context: Context) 
         set(state) {
             shP.edit().putBoolean("EXPENDITURE", state).apply()
         }
+
     var currency: String
-        get() = shP.getString("currency", "\$")!!
+        get() = shP.getString("currency", "U")!!
         set(str) {
             shP.edit().putString("EXPENDITURE", str).apply()
         }
-
+    var currencyName: String
+        get() = shP.getString("currency_name", "UZS")!!
+        set(str) {
+            shP.edit().putString("EXPENDITURE", str).apply()
+        }
 }
