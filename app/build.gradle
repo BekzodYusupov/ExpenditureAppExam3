@@ -86,4 +86,9 @@ dependencies {
     implementation("org.orbit-mvi:orbit-compose:4.3.2")
     implementation("org.orbit-mvi:orbit-viewmodel:4.3.2")
 
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
 }
