@@ -38,7 +38,7 @@ class ExpenditureRepositoryImpl @Inject constructor(
 
     override fun getIncomes(): Flow<List<CategoryEntity>> = expenditureDao.getIncomes()
 
-    override fun updateAllExpenditure(list: ExpenditureEntity) = expenditureDao.updateAll(list)
+    override fun updateAllExpenditure(list: List<ExpenditureEntity>) = expenditureDao.updateAll(list)
 
     override fun deleteByCategoryId(categoryId: Long) = expenditureDao.deleteByCategoryId(categoryId)
 

@@ -21,7 +21,7 @@ interface ExpenditureRepository {
 
     fun getIncomes(): Flow<List<CategoryEntity>>
 
-    fun updateAllExpenditure(list: ExpenditureEntity)
+    fun updateAllExpenditure(list: List<ExpenditureEntity>)
 
     fun deleteByCategoryId(categoryId: Long)
 

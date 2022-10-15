@@ -8,9 +8,9 @@ import androidx.room.PrimaryKey
 data class ExpenditureEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long,
-    val amount: Double,
-    val notes: String,
-    val type: Int, //0 = expense and 1 = income
-    val categoryId: Long,
-    val date: Long
+    var amount: Double,
+    var notes: String,
+    var type: Int, //0 = expense and 1 = income
+    var categoryId: Long,
+    var date: Long
 )

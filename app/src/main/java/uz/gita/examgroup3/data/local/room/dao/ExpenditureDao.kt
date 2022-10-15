@@ -19,7 +19,7 @@ interface ExpenditureDao : BaseDao<ExpenditureEntity> {
     fun getIncomes(): Flow<List<CategoryEntity>>
 
     @Update
-    fun updateAll(vararg list: ExpenditureEntity)   // bu pul birligini o'zgartirganda kerak
+    fun updateAll(list: List<ExpenditureEntity>)   // bu pul birligini o'zgartirganda kerak
 
     @Query("DELETE FROM ExpenditureEntity WHERE categoryId = :categoryId")
     fun deleteByCategoryId(categoryId: Long)    // category o'chirib yuborilganida shu category ga tegishli barcha kirim chiqimlar o'chirib yuboriladi
