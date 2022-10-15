@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class CategoryEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long,
-    val name: String,
-    val imgRes: Int,
-    val categoryType: Int //0 = expense and 1 = income
+    var name: String,
+    var imgRes: Int,
+    var categoryType: Int //0 = expense and 1 = income
 )
