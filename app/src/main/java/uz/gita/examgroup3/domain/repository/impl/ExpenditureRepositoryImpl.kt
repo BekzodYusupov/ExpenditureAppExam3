@@ -34,6 +34,9 @@ class ExpenditureRepositoryImpl @Inject constructor(
 
     override fun getAllExpenditure(): Flow<List<ExpenditureEntity>> = expenditureDao.getAll()
 
+    override fun getAllByCategoryId(categoryId: Long): Flow<List<ExpenditureEntity>> =
+        expenditureDao.getByCategoryId(categoryId)
+
     override fun getExpenses(): Flow<List<ExpenditureEntity>> = expenditureDao.getExpenses()
 
     override fun getIncomes(): Flow<List<CategoryEntity>> = expenditureDao.getIncomes()

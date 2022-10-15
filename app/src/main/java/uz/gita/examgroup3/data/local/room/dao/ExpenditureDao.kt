@@ -15,6 +15,9 @@ interface ExpenditureDao : BaseDao<ExpenditureEntity> {
     @Query("SELECT * FROM ExpenditureEntity WHERE type = 0")
     fun getExpenses(): Flow<List<ExpenditureEntity>>
 
+    @Query("SELECT * FROM ExpenditureEntity WHERE categoryId = :categoryId")
+    fun getByCategoryId(categoryId: Long): Flow<List<ExpenditureEntity>>
+
     @Query("SELECT * FROM ExpenditureEntity WHERE type = 1")
     fun getIncomes(): Flow<List<CategoryEntity>>
 
