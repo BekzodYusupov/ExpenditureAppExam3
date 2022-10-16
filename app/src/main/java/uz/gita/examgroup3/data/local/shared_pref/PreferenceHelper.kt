@@ -1,4 +1,4 @@
-package uz.gita.examgroup3.data.local.SharedPref
+package uz.gita.examgroup3.data.local.shared_pref
 
 import android.content.Context
 import android.content.SharedPreferences

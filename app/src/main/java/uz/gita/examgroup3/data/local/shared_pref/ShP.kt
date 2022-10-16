@@ -1,4 +1,4 @@
-package uz.gita.examgroup3.data.local.SharedPref
+package uz.gita.examgroup3.data.local.shared_pref
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -16,5 +16,16 @@ class ShP @Inject constructor(@ApplicationContext private val context: Context) 
         get() = shP.getBoolean("isInit", false)
         set(state) {
             shP.edit().putBoolean("EXPENDITURE", state).apply()
+        }
+
+    var currency: String
+        get() = shP.getString("currency", "U")!!
+        set(str) {
+            shP.edit().putString("EXPENDITURE", str).apply()
+        }
+    var currencyName: String
+        get() = shP.getString("currency_name", "UZS")!!
+        set(str) {
+            shP.edit().putString("EXPENDITURE", str).apply()
         }
 }
