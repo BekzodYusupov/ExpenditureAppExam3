@@ -21,4 +21,6 @@ class NavigationDispatcher @Inject constructor() : AppNavigator, NavigationHandl
     override suspend fun backToRoot() = navigate { popUntilRoot() }
 
     override suspend fun navigateTo(screen: AndroidScreen) = navigate { push(screen) }
+
+    override suspend fun replaceTo(screen: AndroidScreen) = navigate { replace(screen) }
 }

@@ -21,7 +21,6 @@ class SplashViewModelImpl @Inject constructor(
         when (intent) {
             SplashScreenIntent.OpenIntro -> {
                 viewModelScope.launch {
-                    delay(1000)
                     directions.navigateToIntro()
                     useCase.isIntroOpen(true)
                 }

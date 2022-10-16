@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ExamGroup3</string>
+
+    //intro
+    <string name="intro_title_1">Easy to add new transaction</string>
+    <string name="intro_title_2">Track income and expenses</string>
+    <string name="intro_title_3">Track income and expenses</string>
+
+    <string name="intro_content_1">We alway try to bring the best experience to users. Your transactions are recorded as quickly as possible. You will not have any difficulties when you first use MoNo.</string>
+    <string name="intro_content_2">details tracking transactions visually with the adding images features bills</string>
+    <string name="intro_content_3">Supports viewing your balance for monthly, income and expenses, debts, loans as well as reports with category.</string>
 </resources>

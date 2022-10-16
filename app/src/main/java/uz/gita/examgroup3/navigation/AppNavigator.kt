@@ -7,4 +7,5 @@ interface AppNavigator {
     suspend fun backAll()
     suspend fun backToRoot()
     suspend fun navigateTo(screen: AndroidScreen)
+    suspend fun replaceTo(screen: AndroidScreen)
 }
