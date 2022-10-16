@@ -9,6 +9,7 @@ import uz.gita.examgroup3.data.local.room.entity.ExpenditureEntity
 
 @Dao
 interface ExpenditureDao : BaseDao<ExpenditureEntity> {
+
     @Query("SELECT * FROM ExpenditureEntity")
     fun getAll(): Flow<List<ExpenditureEntity>>
 
@@ -19,7 +20,7 @@ interface ExpenditureDao : BaseDao<ExpenditureEntity> {
     fun getByCategoryId(categoryId: Long): Flow<List<ExpenditureEntity>>
 
     @Query("SELECT * FROM ExpenditureEntity WHERE type = 1")
-    fun getIncomes(): Flow<List<CategoryEntity>>
+    fun getIncomes(): Flow<List<ExpenditureEntity>>
 
     @Update
     fun updateAll(list: List<ExpenditureEntity>)   // bu pul birligini o'zgartirganda kerak

@@ -21,7 +21,7 @@ interface ExpenditureRepository {
 
     fun getExpenses(): Flow<List<ExpenditureEntity>>
 
-    fun getIncomes(): Flow<List<CategoryEntity>>
+    fun getIncomes(): Flow<List<ExpenditureEntity>>
 
     fun updateAllExpenditure(list: List<ExpenditureEntity>)
 

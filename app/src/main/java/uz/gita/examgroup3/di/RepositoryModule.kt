@@ -13,10 +13,10 @@ import uz.gita.examgroup3.domain.repository.impl.ExpenditureRepositoryImpl
 @InstallIn(SingletonComponent::class)
 interface RepositoryModule {
     @Binds
-    fun bindsRepo(impl: ExpenditureRepositoryImpl): ExpenditureRepository
+    fun bindsRepoEx(impl: ExpenditureRepositoryImpl): ExpenditureRepository
 
     @Binds
-    fun bindsRepo(impl: CategoryRepositoryImpl): CategoryRepository
+    fun bindsRepoIn(impl: CategoryRepositoryImpl): CategoryRepository
 
 
 }
