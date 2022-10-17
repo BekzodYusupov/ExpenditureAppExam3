@@ -4,7 +4,7 @@ import uz.gita.examgroup3.navigation.AppNavigator
 import uz.gita.examgroup3.navigation.Directions.SplashDirections
 import uz.gita.examgroup3.presentation.screen.IntroScreen
 import uz.gita.examgroup3.presentation.screen.PinScreen
-import uz.gita.examgroup3.presentation.screen.TransactionScreen
+import uz.gita.examgroup3.presentation.screen.transaction.TransactionScreen
 import javax.inject.Inject
 
 class SplashDirectionsImpl @Inject constructor(

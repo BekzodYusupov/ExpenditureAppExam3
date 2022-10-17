@@ -28,6 +28,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import uz.gita.examgroup3.R
 import uz.gita.examgroup3.data.model.IntroData
+import uz.gita.examgroup3.presentation.screen.transaction.TransactionScreen
 import uz.gita.examgroup3.presentation.utils.MainButton
 import uz.gita.examgroup3.ui.myColorSet
 
